@@ -1,0 +1,62 @@
+
+* {
+    font-family: sans-serif;
+    color: #55f;
+}
+
+.title {
+    font-size: 6rem;
+}
+
+.subtitle {
+    font-size: 4rem;
+}
+
+/*
+    -after @media specify the type of device you're dealing with: screen, print device, speech device
+    -'all' means exactly what is says, all devices (but media query defaults to all anyway)
+
+    -'and' concatenates the "MEDIA QUERY SELECTOR"
+    -A comma ',' means 'or'
+
+@media all and (max-width: 500px) {
+    * {
+        color: #5a5;
+        text-align: center;
+    }
+}
+*/
+
+/* 
+    -we can just remove 'all'
+*/
+@media (max-width: 500px) {
+    * {
+        color: #5a5;
+        text-align: center;
+    }
+}
+
+/* 
+    we can also deal with orientation
+*/
+/*
+    landscape mode happens when width gets larger than height
+    (the same thing applies with portrait)
+*/
+@media (orientation: landscape) {
+    .title {
+        color: #000;
+    }
+}
+
+@media (orientation: portrait) {
+    .subtitle {
+        color: #000;
+    }
+}
+
+/* 
+    you can also concatenate orientation and max-width selector
+*/
+

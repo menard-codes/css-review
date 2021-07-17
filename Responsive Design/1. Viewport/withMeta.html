@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Responsive Design</title>
+        <!-- try commenting this meta tag and it will be visible that the page is zoomed out -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Learn Responsive Design</h1>
+        <p>This will be my notes as well as project</p>
+
+        <h2>Viewport Meta</h2>
+        <p>Gives the browser an "instruction" on how to control the page's dimension and scaling</p>
+        <code class="code">&lt;meta name=&apos;viewport&apos; content=&apos;width=device-width, initial-scale=1.0&apos; /&gt;</code>
+        <p>The <code>width=device-width</code> sets the width of the page to fit the screen-width</p>
+        <p>The <code>initial-scale=1.0</code> sets the initial zoom level when the page is first loaded by the browser</p>
+        <p>In addition to <code>initial-scale</code>, you can also set the following attributes:</p>
+        <ul>
+            <li>minimum-scale</li>
+            <li>maximum-scale</li>
+            <li>user-scalable</li>
+        </ul>
+        <p>These can disable the user's ability to zoom the viewport, potentially causing accessibility issues, therefore they're not recommended</p>
+        <h3>Size Content to Viewport</h3>
+        <ol>
+            <li><strong>Do NOT use large fixed width elements</strong> - If the element is wider than the viewport, it may cause horizontal scroll</li>
+            <li><strong>Do NOT let the content rely on a particular viewport width to render well</strong> - Screen dimensions vary, so it shall not depend on a particular viewport to render.</li>
+            <li><strong>Use CSS media queries to apply different styling for small and large screens</strong> - Setting large absoulte CSS widths for page elements will cause it to be too wide on smaller devices
+            Instead, consider using relative values (i.e. width: 100%). Be careful of using large absolute positioning values as it may cause the element to fall outside the viewport on smaller devices</li>
+        </ol>
+        <h3>Images</h3>
+        <p>Images should be set to <code>max-width</code> so that it won't stretch larger than its natural size</p>
+        <code>img { max-width: 100%; display: block }</code>
+        <img src="JAMstack.png" />
+        <h3>Layout</h3>
+        <p>Screen dimensions vary, content should not rely on a particular viewport width to render.
+        for using percentages in the widths, the columns always remain a certain percentage of the container</p>
+        <div class="cont1">
+            <div class="smaller">
+                <h6>Hello World</h6>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+            <div class="larger">
+                <h6>Hello World</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nemo autem quisquam dolores et ab eligendi mollitia, tenetur qui! Sed ab repellat repudiandae mollitia aliquam facere accusamus voluptatem veritatis soluta.</p>
+            </div>    
+        </div>
+        <p>Modern CSS layout techniques such as Flexbox and Grid makes the creation of these grids much easier</p>
+        <div class="dummy-space"></div>
+    </body>
+</html>
+
+<!-- 
+    To Learn Today:
+        1. Viewport
+        2. media queries and breakpoints
+        3. layout
+            -flexbox
+            -grid
+-->

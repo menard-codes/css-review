@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="./flex.css" />
+</head>
+<body>
+    <h1>Flexbox Vendor Prefexing</h1>
+    <p>Flexbox changed overtime, so different browsers support different versions of flexbox. That's why it's necessary to add vendor prefixing</p>
+    <h1>Flex Properties</h1>
+    <h2>Container props:</h2>
+    <h3>flex-wrap</h3>
+    <p>
+        It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in.
+        nowrap - all flex items will be on one line
+        wrap - flex items will wrap onto multiple lines from top to bottom
+        wrap-reverse - flex items wrap into multiple lines from bottom to top
+    </p>
+    <h4>No Wrap</h4>
+    <div id="no-wrap">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h4>Wrap</h4>
+    <div id="wrap">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h4>Wrap Reverse</h4>
+    <div id="wrap-reverse">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h4>Flex Flow</h4>
+    <p>Short-hand for flex-direction and flex wrap. Default value is: row nowrap</p>
+    <h4>Align Items vs Align Content</h4>
+    <p>Align Items - aligns the items themselves in a row.</p>
+    <p>Now, align-content doesn't interfere with items but in the row themselves. Hence, align-content will try to align rows with respect to each other and flex container. </p>
+    <h2>Children Props</h2>
+    <h3>order</h3>
+    <p>by default, flex items are ordered based on the source, but you can reorder them on CSS using order property</p>
+    <h3>flex-grow</h3>
+    <p>This is similar to approach of css grid to fill in the extra spaces. The default is 1, where space is equally distributed, but if one item has a value of 2 for example, it will occupy twice as more</p>
+    <h3>flex-shrink</h3>
+    <p>Inverse of flex-grow</p>
+    <h3>flex</h3>
+    <p>Shorthand for flex-grow, flex-shrink, flex-basis</p>
+    <h3>align-self</h3>
+    <p>Overwrites the value set by the parent/container. Value provided will be used to align this item</p>
+</body>
+</html>

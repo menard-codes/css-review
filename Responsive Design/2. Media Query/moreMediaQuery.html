@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Media Query</h1>
+    <p>Media Queries are commonly associated with CSS, but they can be used in HTML and JavaScript as well</p>
+    <h2>HTML</h2>
+    <p>Tags can use Media Queries. There are several reasons to use them, here's an example:</p>
+    <p>-In a link tag where we import a specific css file depending on the media query condition
+        (i.e. we have a css for all instances, a css for mobile view, for desktop view, etc.)
+        <span style="background-color: #ccc; padding: 2px;">&lt;link rel=&apos;stylesheet&apos; href=&apos;small.css&apos; media=&apos;(min-width: 20em)&apos;</span>
+    </p>
+    <p>Another one is with picture tag where on the srcset, is specifies which version of the image to download based on sreen size</p>
+    <h2>CSS</h2>
+    <p>No need to include here</p>
+    <h2>JavaScript</h2>
+    <p>JS Media Query acts pretty much like in CSS. We do media queries here via <span style="background-color: #ccc; padding: 2px;">window.matchMedia( &apos;( min-width: 768px; )&apos; )</span></p>
+    <h2>Anatomy of a Media Query</h2>
+    <p>
+        @media - at-rule
+        screen - media type
+        (min-width: 320px) - media feature (many more on css tricks media query)
+        and - logical operators
+            -and
+            -or (comma ',')
+            -not
+    </p>
+    <h2>Avoid Complicating the codebase</h2>
+    <p>Assuming is really dangerous, so when you design, make sure to develop and think about your products while leaving assumptions behind and use media queries to make sure that your content is displayed correctly in any contact and before any user.</p>
+    <h2>Nesting and complex decision making</h2>
+    <p>We can nest media queries and perform more complex and even nested logic
+        @media (min-width: 20em), not all and (min-height: 40em) {  
+            @media not all and (pointer: none) { ... }
+            @media screen and ( (min-width: 50em) and (orientation: landscape) ), print and ( not (color) ) { ... }
+          }
+    </p>
+</body>
+</html>

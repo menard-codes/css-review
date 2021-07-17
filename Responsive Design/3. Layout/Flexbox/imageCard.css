@@ -1,0 +1,66 @@
+
+/* 
+This is mobile first, so it's optimal to:
+    320px — 480px: Mobile devices
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230, 230, 230);
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: #0d00be;
+    color: #fff;
+    text-align: center;
+}
+
+#logo {
+    font-size: 2rem;
+}
+
+#dummy-top {
+    margin-top: 60px;
+}
+
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+}
+
+.card {
+    vertical-align: middle;
+    width: 400px;
+    height: 100%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 grey;
+    background-color: #fff;
+}
+
+.card > .photo-info {
+    border-top: 1px solid grey;
+    padding-top: 20px;
+}
